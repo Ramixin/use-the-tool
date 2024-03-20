@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "usethetool",
+  "version": "${version}",
+  "name": "UseTheTool",
+  "description": "Forces the player to use the correct tool to mine a block",
+  "authors": [
+    "RamGames"
+  ],
+  "contact": {
+    "repo": "https://github.com/RamGemes/UseTheTool"
+  },
+  "license": "MIT",
+  "icon": "assets/usethetool/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.ramgames.usethetool.UseTheTool"
+    ]
+  },
+  "mixins": [
+    "usethetool.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": [">=1.14 <=1.16.4"]
+  }
+}
