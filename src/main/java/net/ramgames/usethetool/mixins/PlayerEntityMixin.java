@@ -19,7 +19,7 @@ public class PlayerEntityMixin {
 
     @ModifyReturnValue(method = "getBlockBreakingSpeed", at = @At("RETURN"))
     private float cancelBreakingIfWrongTool(float original, @Local(argsOnly = true) BlockState block) {
-        if(this.inventory.getMainHandStack().isEmpty() || !(this.inventory.getMainHandStack().getItem() instanceof ToolItem) ||this.inventory.getMainHandStack().isEffectiveOn(block)) return original;
+        if(this.inventory.getMainHandStack().isEmpty() || !(this.inventory.getMainHandStack().getItem() instanceof ToolItem) ||this.inventory.getMainHandStack().isSuitableFor(block)) return original;
         return 0;
     }
 }
